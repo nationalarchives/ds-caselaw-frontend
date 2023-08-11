@@ -1,0 +1,11 @@
+{
+  "name": "@nationalarchives/ds-caselaw-frontend",
+  "version": "0.1.0",
+  "description": "Shared styles for the National Archives Find Case Law project",
+  "main": "src/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Cowlishaw <tim@timcowlishaw.co.uk>",
+  "license": "UNLICENSED"
+}
