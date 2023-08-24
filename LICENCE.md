@@ -1,3 +1,5 @@
+# The MIT License (MIT)
+
 Copyright (C) 2023 Crown Copyright (The National Archives)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
