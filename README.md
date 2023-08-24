@@ -1,7 +1,10 @@
-# DS Caselaw Frontend
-## Introduction
+# The National Archives: Find Case Law
 
-This repository contains shared SASS and JS for the [Find caselaw service](https://caselaw.nationalarchives.gov.uk/), it's used across the Editor UI[Editor UI](https://github.com/nationalarchives/ds-caselaw-editor-ui) and the [Public UI](https://github.com/nationalarchives/ds-caselaw-public-ui).
+This repository is part of the [Find Case Law](https://caselaw.nationalarchives.gov.uk/) project at [The National Archives](https://www.nationalarchives.gov.uk/). For more information on the project, check [the documentation](https://github.com/nationalarchives/ds-find-caselaw-docs).
+
+# Frontend CSS
+
+This repository contains shared SASS and JS for the Find Case Law service. It's used across the Editor UI[Editor UI](https://github.com/nationalarchives/ds-caselaw-editor-ui) and the [Public UI](https://github.com/nationalarchives/ds-caselaw-public-ui).
 
 ## Contents
 
