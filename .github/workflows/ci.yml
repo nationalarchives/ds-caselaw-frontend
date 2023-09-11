@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+
+jobs:
+  build-scss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Set up node
+        uses: actions/setup-node@v3.8.1
+
+      - name: Install node dependencies
+        run: npm install sass
+
+      - name: Build scss
+        run: npm run build
