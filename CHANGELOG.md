@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 It is part of the [TRE template repository](https://github.com/nationalarchives/da-tre-template)
 
-## [0.0.1] - 2023-01-31
+## [v1.1.0]
+
+- Add shared colour palette variables
+
+## [v1.0.0]
+
+- Add styling needed to render a judgment
 
 ### Added
 
