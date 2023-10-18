@@ -1,111 +1,13 @@
 @import "./mixins";
-
-.judgment {
-  max-width: 90%;
-  margin: auto;
-  margin-bottom: calc($spacer__unit * 2);
-  font-size: 1.2rem;
-  line-height: 1.3;
-  font-family: $font__serif;
-
-  @media (min-width: $grid__breakpoint-medium) {
-    font-size: 1.1rem;
-    max-width: 40rem;
-  }
-
-  @media (min-width: $grid__breakpoint-medium) {
-    font-size: 1rem;
-    max-width: 46rem;
-  }
-
-  img {
-    max-width: 100vw;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-
-    &.pr-two-column {
-      table-layout: fixed;
-      width: 100%;
-
-      td:first-child {
-        width: 80%;
-        padding-left: 20%;
-        padding-right: 0;
-
-        @media (max-width: $grid__breakpoint-small) {
-          padding: 0 1rem;
-        }
-      }
-
-      td:last-child {
-        width: 20%;
-        padding: 0;
-        overflow-wrap: anywhere;
-
-        @media (max-width: $grid__breakpoint-small) {
-          white-space: nowrap;
-          padding-right: 1rem;
-        }
-      }
-    }
-  }
-
-  td {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  td > p:first-child {
-    margin-top: 0;
-  }
-
-  td > p:last-child {
-    margin-bottom: 0;
-  }
-}
-
+/* stylelint-disable no-descending-specificity */
 .judgment-header {
-  padding-top: $spacer__unit * 3;
+  padding-top: $spacer-unit * 3;
 
   table {
     td {
       border-color: transparent;
     }
   }
-
-  // START – Thi is a fix to correct the alignment of the crest image so that it is centred.
-  // Refer to NCN [2022] EWCA Crim 985 as an example.
-
-  table.crest-alignment-fix {
-    margin-top: 1rem;
-
-    td {
-      border-color: transparent;
-      width: 67%;
-      padding-left: 0;
-
-      &:last-child {
-        padding: 0;
-        width: 33%;
-        text-align: right;
-      }
-
-      img {
-        display: block;
-        padding-left: 57%;
-        margin: 1rem auto;
-      }
-    }
-
-    .judgment-header__neutral-citation {
-      text-align: left;
-    }
-  }
-
-  // ENDS
 
   &__logo {
     img {
@@ -114,13 +16,9 @@
     }
   }
 
-  p {
-    margin: 0 0 calc($spacer__unit / 2) 0;
-  }
-
   &__neutral-citation {
-    text-decoration: underline;
     text-align: right;
+    text-decoration: underline;
 
     span.ncn-nowrap {
       white-space: nowrap;
@@ -132,10 +30,45 @@
     }
   }
 
+  // START – Thi is a fix to correct the alignment of the crest image so that it is centred.
+  // Refer to NCN [2022] EWCA Crim 985 as an example.
+
+  table.crest-alignment-fix {
+    margin-top: 1rem;
+
+    td {
+      width: 67%;
+      padding-left: 0;
+      border-color: transparent;
+
+      &:last-child {
+        width: 33%;
+        padding: 0;
+        text-align: right;
+      }
+
+      img {
+        display: block;
+        margin: 1rem auto;
+        padding-left: 57%;
+      }
+    }
+
+    .judgment-header__neutral-citation {
+      text-align: left;
+    }
+  }
+
+  // ENDS
+
+  p {
+    margin: 0 0 calc($spacer-unit / 2) 0;
+  }
+
   &__case-number {
-    padding-top: $spacer__unit;
-    text-decoration: underline;
+    padding-top: $spacer-unit;
     text-align: right;
+    text-decoration: underline;
 
     h1 {
       font-size: 1rem;
@@ -148,23 +81,23 @@
   }
 
   &__address {
-    padding-top: $spacer__unit;
+    padding-top: $spacer-unit;
     font-style: normal;
-    text-decoration: underline;
     text-align: right;
+    text-decoration: underline;
   }
 
   &__date {
-    padding-top: $spacer__unit;
+    padding-top: $spacer-unit;
     font-style: normal;
-    text-decoration: underline;
     text-align: right;
+    text-decoration: underline;
   }
 
   &__before {
-    padding-top: $spacer__unit;
-    text-align: center;
+    padding-top: $spacer-unit;
     font-weight: bold;
+    text-align: center;
 
     h2 {
       font-size: 1rem;
@@ -173,27 +106,8 @@
 
   &__between {
     h2 {
-      font-size: $spacer__unit;
+      font-size: $spacer-unit;
       text-align: center;
-    }
-  }
-
-  @media (min-width: $grid__breakpoint-medium) {
-    &__party {
-      @include three-columns($spacer__unit);
-      font-weight: bold;
-    }
-
-    &__and-separator {
-      text-align: center;
-      font-weight: bold;
-
-      &--between {
-        text-align: center;
-        font-weight: bold;
-        margin-top: $spacer__unit;
-        margin-bottom: $spacer__unit;
-      }
     }
   }
 
@@ -202,14 +116,14 @@
   }
 
   &__queens-counsel {
-    @media (min-width: $grid__breakpoint-medium) {
+    @media (min-width: $grid-breakpoint-medium) {
       ul {
         padding: 0;
       }
 
       li {
-        list-style: none;
         text-align: center;
+        list-style: none;
 
         span {
           font-weight: bold;
@@ -241,17 +155,105 @@
   &__pr-left {
     text-align: left !important;
   }
+
+  @media (min-width: $grid-breakpoint-medium) {
+    &__party {
+      @include three-columns($spacer-unit);
+
+      font-weight: bold;
+    }
+
+    &__and-separator {
+      font-weight: bold;
+      text-align: center;
+
+      &--between {
+        margin-top: $spacer-unit;
+        margin-bottom: $spacer-unit;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.judgment {
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: calc($spacer-unit * 2);
+
+  font-family: $font-serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+
+  img {
+    max-width: 100vw;
+  }
+
+  td {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    &.pr-two-column {
+      table-layout: fixed;
+      width: 100%;
+
+      td:first-child {
+        width: 80%;
+        padding-right: 0;
+        padding-left: 20%;
+
+        @media (max-width: $grid-breakpoint-small) {
+          padding: 0 1rem;
+        }
+      }
+
+      td:last-child {
+        width: 20%;
+        padding: 0;
+        overflow-wrap: anywhere;
+
+        @media (max-width: $grid-breakpoint-small) {
+          padding-right: 1rem;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  td > p:first-child {
+    margin-top: 0;
+  }
+
+  td > p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $grid-breakpoint-medium) {
+    max-width: 40rem;
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: $grid-breakpoint-medium) {
+    max-width: 46rem;
+    font-size: 1rem;
+  }
 }
 
 .judgment-body {
   table {
-    border: 1px solid $color__almost-black;
-    margin: 1rem auto;
     table-layout: auto;
     width: 100%;
+    margin: 1rem auto;
+    border: 1px solid $color-almost-black;
 
     td {
-      border: 1px solid $color__almost-black;
+      border: 1px solid $color-almost-black;
     }
   }
 
@@ -265,23 +267,23 @@
   }
 
   &__number {
-    @media (max-width: $grid__breakpoint-medium) {
-      padding-right: $spacer__unit;
-    }
-
     &:target {
-      animation-duration: 1.5s;
       animation-name: emphasis-border;
+      animation-duration: 1.5s;
 
       + .judgment-body__text {
-        animation-duration: 1.5s;
         animation-name: emphasis;
+        animation-duration: 1.5s;
       }
+    }
+
+    @media (max-width: $grid-breakpoint-medium) {
+      padding-right: $spacer-unit;
     }
   }
 
   &__section {
-    @media (max-width: $grid__breakpoint-medium) {
+    @media (max-width: $grid-breakpoint-medium) {
       > div {
         display: inline;
 
@@ -296,24 +298,22 @@
           &::after {
             content: " ";
             display: block;
-            margin-bottom: $spacer__unit;
+            margin-bottom: $spacer-unit;
           }
         }
       }
     }
 
-    @media (min-width: $grid__breakpoint-medium) {
+    @media (min-width: $grid-breakpoint-medium) {
       display: grid;
-      grid-template-columns: 1fr 15fr;
-      grid-template-rows: 1fr;
-      gap: 0 $spacer__unit * 0.5;
-      grid-template-areas: ". .";
+      grid-template: ". ." 1fr / 1fr 15fr;
+      gap: 0 $spacer-unit * 0.5;
     }
   }
 
   &__nested-section {
-    @media (max-width: $grid__breakpoint-medium) {
-      margin-left: $spacer__unit;
+    @media (max-width: $grid-breakpoint-medium) {
+      margin-left: $spacer-unit;
 
       > div {
         display: inline;
@@ -329,23 +329,21 @@
           &::after {
             content: " ";
             display: block;
-            margin-bottom: $spacer__unit;
+            margin-bottom: $spacer-unit;
           }
         }
       }
     }
 
-    @media (min-width: $grid__breakpoint-medium) {
+    @media (min-width: $grid-breakpoint-medium) {
       display: grid;
-      grid-template-columns: 1fr 24fr;
-      grid-template-rows: 1fr;
-      gap: 0 $spacer__unit * 0.5;
-      grid-template-areas: ". .";
+      grid-template: ". ." 1fr / 1fr 24fr;
+      gap: 0 $spacer-unit * 0.5;
     }
   }
 
   &__indent {
-    margin-left: $spacer__unit;
+    margin-left: $spacer-unit;
   }
 
   &__no-margin-top {
@@ -354,28 +352,28 @@
 }
 
 .judgment-download {
-  background-color: $color__almost-black;
-  padding: calc($spacer__unit / 2);
-  color: $color__white;
+  padding: calc($spacer-unit / 2);
+  color: $color-white;
   text-align: center;
+  background-color: $color-almost-black;
 
   &__container {
     margin: auto;
 
-    @media (min-width: $grid__breakpoint-medium) {
+    @media (min-width: $grid-breakpoint-medium) {
       max-width: 40rem;
     }
 
-    @media (min-width: $grid__breakpoint-medium) {
+    @media (min-width: $grid-breakpoint-medium) {
       max-width: 46rem;
     }
   }
 
   &__list {
     display: inline-block;
-    list-style: none;
-    text-align: center;
     padding: 0;
+    text-align: center;
+    list-style: none;
 
     li {
       display: inline-block;
@@ -389,11 +387,14 @@
 
   a {
     @include link-on-dark-bg;
-    background-image: url($fa_download);
+
+    padding: calc($spacer-unit * 0.3);
+    padding-left: calc($spacer-unit * 2);
+
+    background-image: url($fa-download);
     background-repeat: no-repeat;
+    background-position: calc($spacer-unit / 4) calc($spacer-unit / 4);
     background-size: 1rem;
-    background-position: calc($spacer__unit / 4) calc($spacer__unit / 4);
-    padding: calc($spacer__unit * 0.3);
-    padding-left: calc($spacer__unit * 2);
   }
 }
+/* stylelint-enable no-descending-specificity */
