@@ -6,11 +6,24 @@ This repository is part of the [Find Case Law](https://caselaw.nationalarchives.
 
 # Frontend CSS
 
-This repository contains shared SASS and JS for the Find Case Law service. It's used across the Editor UI[Editor UI](https://github.com/nationalarchives/ds-caselaw-editor-ui) and the [Public UI](https://github.com/nationalarchives/ds-caselaw-public-ui).
+This repository contains shared SASS and JS for the Find Case Law service. It's used across the [Editor UI](https://github.com/nationalarchives/ds-caselaw-editor-ui) and the [Public UI](https://github.com/nationalarchives/ds-caselaw-public-ui).
 
-## Contents
+## Usage
 
-- The SASS for displaying judgment text, in `src/includes/_judgment_text.scss`
+This repository is _not_ listed on npm, and you will need to add the full git repository path to your `package.json`:
+
+```json
+"dependencies": {
+  "@nationalarchives/ds-caselaw-frontend": "git://github.com/nationalarchives/ds-caselaw-frontend#v1.1.0",
+  "sass": "^1.58.3"
+}
+```
+
+Once installed, import from the correct location in your SCSS, checking that relative paths are correct:
+
+```scss
+@import "../../node_modules/@nationalarchives/ds-caselaw-frontend/src/main";
+```
 
 ## Development
 
