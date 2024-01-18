@@ -283,6 +283,8 @@
   }
 
   &__section {
+    scroll-margin-top: 4rem;
+
     @media (max-width: $grid-breakpoint-medium) {
       > div {
         display: inline;
