@@ -1,6 +1,6 @@
 {
   "name": "@nationalarchives/ds-caselaw-frontend",
-  "version": "0.1.1",
+  "version": "2.0.2",
   "description": "Shared styles for the National Archives Find Case Law project",
   "main": "src/main.scss",
   "scripts": {
