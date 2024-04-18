@@ -1,5 +1,39 @@
 @import "./mixins";
 /* stylelint-disable no-descending-specificity */
+@mixin judgment-footnote {
+  scroll-margin-top: 4rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+
+  &:hover {
+    sup {
+      text-decoration: underline;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    sup {
+      @include focus-default;
+    }
+  }
+
+  sup {
+    position: relative;
+    z-index: 0;
+    top: -0.3em;
+
+    margin: 0 0.25rem;
+    padding: 0 0.25rem;
+
+    vertical-align: top;
+
+    background-color: rgba($color-yellow, 0.25);
+    border-radius: 3px;
+  }
+}
+
 .judgment-header {
   padding-top: $spacer-unit * 3;
 
@@ -184,7 +218,7 @@
 
   font-family: $font-serif;
   font-size: 1.2rem;
-  line-height: 1.3;
+  line-height: 1.5;
 
   img {
     max-width: 100vw;
@@ -232,6 +266,18 @@
 
   td > p:last-child {
     margin-bottom: 0;
+  }
+
+  &__hidden {
+    /* Visible to screenreaders */
+    position: absolute;
+    top: auto;
+    left: -10000px;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
   }
 
   @media (min-width: $grid-breakpoint-medium) {
@@ -354,6 +400,20 @@
 
   &__no-margin-top {
     margin-top: 0;
+  }
+
+  &__footnote-reference {
+    @include judgment-footnote;
+  }
+}
+
+.judgment-footer {
+  &__footnote {
+    scroll-margin-top: 4em;
+  }
+
+  &__footnote-backlink {
+    @include judgment-footnote;
   }
 }
 
