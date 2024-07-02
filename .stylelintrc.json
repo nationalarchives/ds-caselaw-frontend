@@ -1,11 +1,6 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-clean-order"
-  ],
-  "plugins": [
-    "stylelint-selector-bem-pattern"
-  ],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-clean-order"],
+  "plugins": ["stylelint-selector-bem-pattern"],
   "rules": {
     "block-no-empty": null,
     "property-no-vendor-prefix": null,
