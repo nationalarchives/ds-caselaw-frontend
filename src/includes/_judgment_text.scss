@@ -1,7 +1,7 @@
 @import "./mixins";
 /* stylelint-disable no-descending-specificity */
 @mixin judgment-footnote {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 9rem;
   padding-bottom: 1rem;
   text-decoration: none;
 
@@ -330,11 +330,11 @@
   }
 
   section {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 9rem;
   }
 
   &__section {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 9rem;
 
     @media (max-width: $grid-breakpoint-medium) {
       > div {
@@ -410,7 +410,7 @@
 
 .judgment-footer {
   &__footnote {
-    scroll-margin-top: 4em;
+    scroll-margin-top: 9rem;
   }
 
   &__footnote-backlink {
