@@ -148,7 +148,7 @@
 
   font-size: $typography-md-text-size;
   line-height: $typography-md-line-height;
-  color: #444;
+  color: $color-darker-grey;
 
   appearance: none;
   background-color: $color-white;
@@ -168,7 +168,7 @@
   }
 
   &:hover {
-    border-color: #888;
+    border-color: $color-darkish-grey;
   }
 
   &:focus {
