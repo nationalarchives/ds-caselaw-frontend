@@ -300,9 +300,9 @@
     border: 1px solid $color-almost-black;
 
     td {
-      border: 1px solid $color-almost-black;
-      word-wrap: break-word;
       padding: 0.5rem 0.75rem;
+      word-wrap: break-word;
+      border: 1px solid $color-almost-black;
     }
   }
 
