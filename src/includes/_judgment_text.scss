@@ -2,7 +2,7 @@
 /* stylelint-disable no-descending-specificity */
 @mixin judgment-footnote {
   scroll-margin-top: 9rem;
-  padding-bottom: 1rem;
+  padding-bottom: $space-4;
   text-decoration: none;
 
   &:hover {
@@ -24,8 +24,8 @@
     z-index: 0;
     top: -0.3em;
 
-    margin: 0 0.25rem;
-    padding: 0 0.25rem;
+    margin: 0 $space-1;
+    padding: 0 $space-1;
 
     vertical-align: top;
 
@@ -35,7 +35,7 @@
 }
 
 .judgment-header {
-  padding-top: $spacer-unit * 3;
+  padding-top: $space-12;
 
   table {
     td {
@@ -68,7 +68,7 @@
   // Refer to NCN [2022] EWCA Crim 985 as an example.
 
   table.crest-alignment-fix {
-    margin-top: 1rem;
+    margin-top: $space-4;
 
     td {
       width: 67%;
@@ -83,7 +83,7 @@
 
       img {
         display: block;
-        margin: 1rem auto;
+        margin: $space-4 auto;
         padding-left: 57%;
       }
     }
@@ -96,16 +96,16 @@
   // ENDS
 
   p {
-    margin: 0 0 calc($spacer-unit / 2) 0;
+    margin: 0 0 $space-2 0;
   }
 
   &__case-number {
-    padding-top: $spacer-unit;
+    padding-top: $space-4;
     text-align: right;
     text-decoration: underline;
 
     h1 {
-      font-size: 1rem;
+      font-size: $typography-md-text-size;
     }
   }
 
@@ -115,32 +115,32 @@
   }
 
   &__address {
-    padding-top: $spacer-unit;
+    padding-top: $space-4;
     font-style: normal;
     text-align: right;
     text-decoration: underline;
   }
 
   &__date {
-    padding-top: $spacer-unit;
+    padding-top: $space-4;
     font-style: normal;
     text-align: right;
     text-decoration: underline;
   }
 
   &__before {
-    padding-top: $spacer-unit;
+    padding-top: $space-4;
     font-weight: bold;
     text-align: center;
 
     h2 {
-      font-size: 1rem;
+      font-size: $typography-md-text-size;
     }
   }
 
   &__between {
     h2 {
-      font-size: $spacer-unit;
+      font-size: $typography-md-text-size;
       text-align: center;
     }
   }
@@ -192,7 +192,7 @@
 
   @media (min-width: $grid-breakpoint-medium) {
     &__party {
-      @include three-columns($spacer-unit);
+      @include three-columns($space-4);
 
       font-weight: bold;
     }
@@ -202,8 +202,8 @@
       text-align: center;
 
       &--between {
-        margin-top: $spacer-unit;
-        margin-bottom: $spacer-unit;
+        margin-top: $space-4;
+        margin-bottom: $space-4;
         font-weight: bold;
         text-align: center;
       }
@@ -214,11 +214,11 @@
 .judgment {
   max-width: 90%;
   margin: auto;
-  margin-bottom: calc($spacer-unit * 2);
+  margin-bottom: $space-8;
 
   font-family: $font-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: $typography-lg-text-size;
+  line-height: $typography-lg-line-height;
   overflow-wrap: anywhere;
 
   img {
@@ -226,8 +226,8 @@
   }
 
   td {
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: $space-4;
+    padding-left: $space-4;
   }
 
   table {
@@ -244,7 +244,7 @@
         padding-left: 20%;
 
         @media (max-width: $grid-breakpoint-small) {
-          padding: 0 1rem;
+          padding: 0 $space-4;
         }
       }
 
@@ -254,7 +254,7 @@
         overflow-wrap: anywhere;
 
         @media (max-width: $grid-breakpoint-small) {
-          padding-right: 1rem;
+          padding-right: $space-4;
           white-space: nowrap;
         }
       }
@@ -283,29 +283,40 @@
 
   @media (min-width: $grid-breakpoint-medium) {
     max-width: 40rem;
-    font-size: 1.1rem;
+    font-size: $typography-md-text-size;
   }
 
   @media (min-width: $grid-breakpoint-medium) {
     max-width: 46rem;
-    font-size: 1rem;
+    font-size: $typography-md-text-size;
   }
 }
 
 .judgment-body {
+  &__table {
+    overflow: scroll;
+    width: 100%;
+    margin: $space-4 0;
+
+    @media (min-width: $grid-breakpoint-medium) {
+      width: calc(100% + $judgment-margin-offset);
+      margin: $space-4 (-$judgment-margin-offset);
+    }
+  }
+
   table {
     table-layout: auto;
-    width: 100%;
-    margin: 1rem auto;
     border: 1px solid $color-almost-black;
 
     td {
+      padding: 0.5rem 0.75rem;
+      word-wrap: break-word;
       border: 1px solid $color-almost-black;
     }
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: $typography-md-text-size;
   }
 
   h4 {
@@ -325,7 +336,7 @@
     }
 
     @media (max-width: $grid-breakpoint-medium) {
-      padding-right: $spacer-unit;
+      padding-right: $space-4;
     }
   }
 
@@ -351,7 +362,7 @@
           &::after {
             content: " ";
             display: block;
-            margin-bottom: $spacer-unit;
+            margin-bottom: $space-4;
           }
         }
       }
@@ -360,13 +371,13 @@
     @media (min-width: $grid-breakpoint-medium) {
       display: grid;
       grid-template: ". ." 1fr / 1fr 15fr;
-      gap: 0 $spacer-unit * 0.5;
+      gap: 0 $space-2;
     }
   }
 
   &__nested-section {
     @media (max-width: $grid-breakpoint-medium) {
-      margin-left: $spacer-unit;
+      margin-left: $space-4;
 
       > div {
         display: inline;
@@ -382,7 +393,7 @@
           &::after {
             content: " ";
             display: block;
-            margin-bottom: $spacer-unit;
+            margin-bottom: $space-4;
           }
         }
       }
@@ -391,12 +402,12 @@
     @media (min-width: $grid-breakpoint-medium) {
       display: grid;
       grid-template: ". ." 1fr / 1fr 24fr;
-      gap: 0 $spacer-unit * 0.5;
+      gap: 0 $space-2;
     }
   }
 
   &__indent {
-    margin-left: $spacer-unit;
+    margin-left: $space-4;
   }
 
   &__no-margin-top {
@@ -419,7 +430,7 @@
 }
 
 .judgment-download {
-  padding: calc($spacer-unit / 2);
+  padding: $space-2;
   color: $color-white;
   text-align: center;
   background-color: $color-almost-black;
@@ -444,7 +455,7 @@
 
     li {
       display: inline-block;
-      margin-left: 1rem;
+      margin-left: $space-4;
     }
   }
 
@@ -455,13 +466,13 @@
   a {
     @include link-on-dark-bg;
 
-    padding: calc($spacer-unit * 0.3);
-    padding-left: calc($spacer-unit * 2);
+    padding: $space-1;
+    padding-left: $space-8;
 
     background-image: url($fa-download);
     background-repeat: no-repeat;
-    background-position: calc($spacer-unit / 4) calc($spacer-unit / 4);
-    background-size: 1rem;
+    background-position: $space-1 $space-1;
+    background-size: $space-4;
   }
 }
 /* stylelint-enable no-descending-specificity */
