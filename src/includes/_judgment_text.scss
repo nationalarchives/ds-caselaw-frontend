@@ -293,16 +293,25 @@
 }
 
 .judgment-body {
+  &__table {
+    overflow: scroll;
+    width: 100%;
+    margin: $space-4 0;
+
+    @media (min-width: $grid-breakpoint-medium) {
+      width: calc(100% + $judgment-margin-offset);
+      margin: $space-4 (-$judgment-margin-offset);
+    }
+  }
+
   table {
     table-layout: auto;
-    width: calc(100% + 53px);
-    margin: $space-4 -53px;
     border: 1px solid $color-almost-black;
 
     td {
-      border: 1px solid $color-almost-black;
+      padding: 0.5rem 0.75rem;
       word-wrap: break-word;
-      padding: $space-2 $space-3;
+      border: 1px solid $color-almost-black;
     }
   }
 
