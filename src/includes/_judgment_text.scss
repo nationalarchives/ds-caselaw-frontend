@@ -376,6 +376,10 @@
   }
 
   &__nested-section {
+    span {
+      word-wrap: break-word;
+    }
+
     @media (max-width: $grid-breakpoint-medium) {
       margin-left: $space-4;
 
@@ -400,9 +404,17 @@
     }
 
     @media (min-width: $grid-breakpoint-medium) {
-      display: grid;
-      grid-template: ". ." 1fr / 1fr 24fr;
-      gap: 0 $space-2;
+      display: flex;
+      gap: $space-2;
+
+      &:has(span:empty) {
+        gap: 0;
+        margin: 0;
+
+        .judgment-body__number {
+          padding: 0;
+        }
+      }
     }
   }
 
