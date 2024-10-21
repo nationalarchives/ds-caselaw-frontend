@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
-  gap: 6px 6px;
+  gap: 6px;
 
   div {
     padding: calc($unit / 4);
