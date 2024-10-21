@@ -14,18 +14,14 @@ repos:
       - id: no-commit-to-branch
       - id: trailing-whitespace
 
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: "4200758"
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v16.10.0
     hooks:
       - id: stylelint
         additional_dependencies:
-          [
-            "stylelint@15.11.0",
-            "stylelint-config-standard-scss@11.0.0",
-            "stylelint-config-clean-order@5.2.0",
-            "stylelint-selector-bem-pattern@3.0.1",
-          ]
-        args: ["--fix"]
+          - stylelint@16.10.0
+          - stylelint-config-standard-scss@13.1.0
+          - stylelint-config-clean-order@6.1.0
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
