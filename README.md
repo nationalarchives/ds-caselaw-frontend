@@ -39,3 +39,8 @@ to ensure your development copy loads the local version of this package.
 
 When you're ready, create a PR on this repository. Once it is merged into main,
 run `npm update` in the two applications to pull the latest `main`, and create PRs for the changes to `package-lock.json`. Once they are merged and deployed, the latest changes will be used.
+
+## Releasing
+
+- Update the version number in `package.json`
+- Tag the new release in GitHub
