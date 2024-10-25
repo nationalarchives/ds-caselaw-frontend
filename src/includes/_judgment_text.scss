@@ -299,6 +299,7 @@
     margin: $space-4 0;
 
     @media (min-width: $grid-breakpoint-medium) {
+      overflow: visible;
       width: calc(100% + $judgment-margin-offset);
       margin: $space-4 (-$judgment-margin-offset);
     }
