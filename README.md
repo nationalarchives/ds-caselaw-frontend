@@ -42,5 +42,9 @@ run `npm update` in the two applications to pull the latest `main`, and create P
 
 ## Releasing
 
-- Update the version number in `package.json`
-- Tag the new release in GitHub
+To create a new release of this project:
+
+- On a new branch, run `npm version 2.0.x`
+- Either push the tags up or push the new commit/branch up
+- Create a new release in GitHub
+- In any project using this package, update it to the latest version
