@@ -1,4 +1,5 @@
 name: CI
+permissions: {}
 on:
   push:
 
@@ -8,6 +9,8 @@ jobs:
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up node
         uses: actions/setup-node@v4.3.0
