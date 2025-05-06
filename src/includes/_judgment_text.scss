@@ -327,6 +327,8 @@
   }
 
   &__number {
+    white-space: nowrap;
+
     &:target {
       animation-name: emphasis-border;
       animation-duration: 1.5s;
