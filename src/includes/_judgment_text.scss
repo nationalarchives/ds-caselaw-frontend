@@ -237,6 +237,7 @@
     &.pr-two-column {
       table-layout: fixed;
       width: 100%;
+      white-space: nowrap;
 
       td:first-child {
         width: 80%;
