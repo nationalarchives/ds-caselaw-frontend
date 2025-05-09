@@ -237,6 +237,7 @@
     &.pr-two-column {
       table-layout: fixed;
       width: 100%;
+      white-space: nowrap;
 
       td:first-child {
         width: 80%;
@@ -326,6 +327,8 @@
   }
 
   &__number {
+    white-space: nowrap;
+
     &:target {
       animation-name: emphasis-border;
       animation-duration: 1.5s;
