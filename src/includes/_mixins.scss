@@ -60,66 +60,67 @@
 
   margin-top: $space-4;
   padding: $space-4 $space-5;
+  border: 0;
 
   font-size: $typography-md-text-size;
   font-weight: 700;
-  color: $color-white;
+  color: colour-var("contrast-font-base");
   text-decoration: none;
 
-  background-color: $color-cta-background;
-  border: 0;
+  background-color: colour-var("link");
 
   &:visited {
-    color: $color-white;
+    color: colour-var("contrast-font-base");
   }
 
   &:focus,
   &:hover {
     @include focus-default;
 
-    color: $color-white;
+    border-color: colour-var("navy");
+
+    color: colour-var("contrast-font-base");
     text-decoration: underline;
 
-    background-color: $color-cta-background-hover;
-    border-color: $color-cta-background-hover;
-    outline-color: $color-cta-background-hover;
+    background-color: colour-var("navy");
+    outline-color: colour-var("navy");
     outline-offset: $space-1;
   }
 }
 
 @mixin emphasised-block {
   padding: $space-4;
-  background-color: $color-light-grey;
-  border-left: 0.5rem solid $color-highlight-blue;
+  border-left: 0.5rem solid colour-var("link");
+  background-color: colour-var("background-tint");
 }
 
 @mixin focus-default {
   z-index: 999;
-  outline: 5px solid $color-focus-blue-outline;
+  outline: 5px solid colour-var("link");
   outline-offset: 0;
 }
 
 @mixin link-on-dark-bg {
-  color: $color-white;
+  color: colour-var("contrast-font-base");
   text-decoration: underline;
 
   &:visited {
-    color: $color-white;
+    color: colour-var("contrast-font-base");
   }
 
   &:hover {
-    color: $color-white;
+    color: colour-var("contrast-font-base");
     text-decoration: none;
   }
 
   &:active {
-    color: $color-white;
+    color: colour-var("contrast-font-base");
   }
 
   &:focus {
     @include focus-default;
 
-    outline-color: $color-white;
+    outline-color: colour-var("contrast-font-base");
   }
 }
 
@@ -127,12 +128,12 @@
   width: 80%;
   margin-top: $space-2;
   padding: $space-2;
+  border: 2px solid colour-var("font-base");
 
   font-family: $font-open-sans;
   font-size: $typography-md-text-size;
 
-  background-color: $color-white;
-  border: 2px solid $color-dark-grey;
+  background-color: colour-var("background");
 
   &:focus {
     @include focus-default;
@@ -145,13 +146,15 @@
   margin-top: $space-2;
   margin-bottom: $space-4;
   padding: $space-1;
+  border: 2px solid colour-var("font-base");
+  border-radius: 0;
 
   font-size: $typography-md-text-size;
   line-height: $typography-md-line-height;
-  color: $color-darker-grey;
+  color: colour-var("font-base");
 
   appearance: none;
-  background-color: $color-white;
+  background-color: colour-var("background");
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat, repeat;
   background-position:
@@ -160,15 +163,13 @@
   background-size:
     0.65rem auto,
     100%;
-  border: 2px solid $color-dark-grey;
-  border-radius: 0;
 
   &::-ms-expand {
     display: none;
   }
 
   &:hover {
-    border-color: $color-darkish-grey;
+    border-color: colour-var("keyline-dark");
   }
 
   &:focus {

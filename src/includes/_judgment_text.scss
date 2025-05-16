@@ -26,11 +26,11 @@
 
     margin: 0 $space-1;
     padding: 0 $space-1;
+    border-radius: 3px;
 
     vertical-align: top;
 
-    background-color: rgba($color-yellow, 0.25);
-    border-radius: 3px;
+    background-color: rgba(colour-var("accent-brand"), 0.25);
   }
 }
 
@@ -308,12 +308,12 @@
 
   table {
     table-layout: auto;
-    border: 1px solid $color-almost-black;
+    border: 1px solid colour-var("contrast-background");
 
     td {
       padding: 0.5rem 0.75rem;
+      border: 1px solid colour-var("contrast-background");
       word-wrap: break-word;
-      border: 1px solid $color-almost-black;
     }
   }
 
@@ -447,9 +447,9 @@
 
 .judgment-download {
   padding: $space-2;
-  color: $color-white;
+  color: colour-var("contrast-font-base");
   text-align: center;
-  background-color: $color-almost-black;
+  background-color: colour-var("contrast-background");
 
   &__container {
     margin: auto;
