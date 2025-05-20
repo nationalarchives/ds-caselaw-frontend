@@ -77,13 +77,13 @@
   &:hover {
     @include focus-default;
 
-    border-color: colour-var("navy");
+    border-color: brand-colour("navy");
 
     color: colour-var("contrast-font-base");
     text-decoration: underline;
 
-    background-color: colour-var("navy");
-    outline-color: colour-var("navy");
+    background-color: brand-colour("navy");
+    outline-color: brand-colour("navy");
     outline-offset: $space-1;
   }
 }
