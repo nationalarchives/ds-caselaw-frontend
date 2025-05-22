@@ -259,6 +259,31 @@
           white-space: nowrap;
         }
       }
+
+      @media (max-width: $grid-breakpoint-small) {
+        display: flex;
+
+        tbody {
+          width: 100%;
+
+          tr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            td,
+            td:first-child,
+            td:last-child {
+              width: 100%;
+              padding: 0;
+
+              .judgment-header__pr-right {
+                text-align: center !important;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
