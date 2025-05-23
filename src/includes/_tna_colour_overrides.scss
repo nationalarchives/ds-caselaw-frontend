@@ -1,21 +1,16 @@
 @use "@nationalarchives/frontend/nationalarchives/variables/colour" with (
   $colour-palette-default: (
     "background": #fff,
-    "background-tint": #ededed,
-    // NOTE: Not in use
+    "background-tint": #ededed, // NOTE: Not in use
     "font-base": #343338,
     "font-dark": #010101,
-    "font-light": rgba(1, 1, 1, 0.58),
-    // NOTE: Not in use
-    "icon-light": rgba(52, 51, 56, 0.45),
-    // NOTE: Not in use
+    "font-light": rgba(1, 1, 1, 0.58), // NOTE: Not in use
+    "icon-light": rgba(52, 51, 56, 0.45), // NOTE: Not in use
     "link": #005fa3,
     "link-visited": #634abb,
     "focus-outline": #00b0ff,
-    "keyline": rgba(38, 38, 42, 0.25),
-    // NOTE: Not in use
-    "keyline-dark": #26262a,
-    // NOTE: Not in use
+    "keyline": rgba(38, 38, 42, 0.25), // NOTE: Not in use
+    "keyline-dark": #26262a, // NOTE: Not in use
     "input-foreground": #010101,
     "input-background": #fff,
     "input-border": #010101,
@@ -23,24 +18,17 @@
     "form-error-text": #c20000,
     "button-text": #fff,
     "button-background": #010101,
-    "button-hover-text": #010101,
-    // NOTE: Not in use
-    "button-hover-background": #fff,
-    // NOTE: Not in use
+    "button-hover-text": #010101, // NOTE: Not in use
+    "button-hover-background": #fff, // NOTE: Not in use
     "contrast-background": #1e1e1e,
     "contrast-font-base": #fff,
-    "contrast-font-dark": #fff,
-    // NOTE: Not in use
-    "contrast-font-light": rgba(255, 255, 255, 0.7),
-    // NOTE: Not in use
-    "contrast-icon-light": rgba(255, 255, 255, 0.45),
-    // NOTE: Not in use
+    "contrast-font-dark": #fff, // NOTE: Not in use
+    "contrast-font-light": rgba(255, 255, 255, 0.7), // NOTE: Not in use
+    "contrast-icon-light": rgba(255, 255, 255, 0.45), // NOTE: Not in use
     "contrast-link": #fff,
     "contrast-link-visited": #fff,
-    "contrast-keyline": rgba(255, 255, 255, 0.3),
-    // NOTE: Not in use
-    "contrast-keyline-dark": rgba(255, 255, 255, 0.6),
-    // NOTE: Not in use
+    "contrast-keyline": rgba(255, 255, 255, 0.3), // NOTE: Not in use
+    "contrast-keyline-dark": rgba(255, 255, 255, 0.6), // NOTE: Not in use
     "contrast-button-text": #010101,
     "contrast-button-background": #fff,
     "contrast-button-hover-text": #fff,
@@ -48,31 +36,21 @@
     "accent-background": #dee0e2,
     "accent-background-light": #ededed,
     "accent-border": #8c9694,
-    "accent-list-marker": rgba(1, 1, 1, 0.58),
-    // NOTE: Not in use
+    "accent-list-marker": rgba(1, 1, 1, 0.58), // NOTE: Not in use
     "accent-font-base": #010101,
-    "accent-font-dark": #010101,
-    // NOTE: Not in use
-    "accent-font-light": rgba(1, 1, 1, 0.7),
-    // NOTE: Not in use
-    "accent-icon-light": rgba(1, 1, 1, 0.45),
-    // NOTE: Not in use
+    "accent-font-dark": #010101, // NOTE: Not in use
+    "accent-font-light": rgba(1, 1, 1, 0.7), // NOTE: Not in use
+    "accent-icon-light": rgba(1, 1, 1, 0.45), // NOTE: Not in use
     "accent-link": #010101,
     "accent-link-visited": #010101,
-    "accent-keyline": rgba(1, 1, 1, 0.3),
-    // NOTE: Not in use
-    "accent-keyline-dark": rgba(1, 1, 1, 0.8),
-    // NOTE Not in use
+    "accent-keyline": rgba(1, 1, 1, 0.3), // NOTE: Not in use
+    "accent-keyline-dark": rgba(1, 1, 1, 0.8), // NOTE Not in use
     "accent-button-text": #fff,
     "accent-button-background": #010101,
-    "accent-button-hover-text": #010101,
-    // NOTE: Not in use
-    "accent-button-hover-background": #fff,
-    // NOTE: Not in use
+    "accent-button-hover-text": #010101, // NOTE: Not in use
+    "accent-button-hover-background": #fff, // NOTE: Not in use
     "accent-brand": "#ffb952",
-    "button-accented-text": #010101,
-    // NOTE: Not in use
-    "button-accented-background": #8c9694,
-    // NOTE: Not in use
+    "button-accented-text": #010101, // NOTE: Not in use
+    "button-accented-background": #8c9694, // NOTE: Not in use
   )
 );
