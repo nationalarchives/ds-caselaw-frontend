@@ -11,11 +11,11 @@
   "author": "Tim Cowlishaw <tim@timcowlishaw.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@nationalarchives/frontend": "^0.17.1"
+    "@nationalarchives/frontend": "^0.23.0"
   },
   "devDependencies": {
-    "stylelint": "16.19.1",
+    "stylelint": "16.23.1",
     "stylelint-config-clean-order": "7.0.0",
-    "stylelint-config-standard-scss": "14.0.0"
+    "stylelint-config-standard-scss": "15.0.1"
   }
 }
