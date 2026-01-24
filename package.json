@@ -11,7 +11,7 @@
   "author": "Tim Cowlishaw <tim@timcowlishaw.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@nationalarchives/frontend": "^0.31.0"
+    "@nationalarchives/frontend": "^0.32.0"
   },
   "devDependencies": {
     "stylelint": "16.26.1",
