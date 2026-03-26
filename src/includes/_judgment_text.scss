@@ -237,7 +237,6 @@
     &.pr-two-column {
       table-layout: fixed;
       width: 100%;
-      white-space: nowrap;
 
       td:first-child {
         width: 80%;
@@ -253,6 +252,7 @@
         width: 20%;
         padding: 0;
         overflow-wrap: anywhere;
+        white-space: nowrap;
 
         @media (max-width: $grid-breakpoint-small) {
           padding-right: $space-4;
