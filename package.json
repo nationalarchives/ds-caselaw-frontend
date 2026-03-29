@@ -14,7 +14,7 @@
     "@nationalarchives/frontend": "^0.38.0"
   },
   "devDependencies": {
-    "stylelint": "17.5.0",
+    "stylelint": "17.6.0",
     "stylelint-config-clean-order": "8.0.1",
     "stylelint-config-standard-scss": "17.0.0"
   }
