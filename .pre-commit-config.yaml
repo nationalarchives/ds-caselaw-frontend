@@ -19,6 +19,7 @@ repos:
     hooks:
       - id: stylelint
         args: [--fix]
+        language: node
         additional_dependencies:
           - stylelint@16.19.1
           - stylelint-config-standard-scss@14.0.0
