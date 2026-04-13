@@ -42,7 +42,7 @@ run `npm update` in the two applications to pull the latest `main`, and create P
 
 ## Release process
 
-<!-- last_reviewed: 2026-04-13 -->
+<!-- last_review: 2026-04-13 -->
 
 To create a new release of this project:
 
