@@ -14,16 +14,13 @@ repos:
       - id: no-commit-to-branch
       - id: trailing-whitespace
 
-  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v17.11.0
+  - repo: local
     hooks:
       - id: stylelint
-        args: [--fix]
-        language: node
-        additional_dependencies:
-          - stylelint@17.11.0
-          - stylelint-config-standard-scss@17.0.0
-          - stylelint-config-clean-order@8.0.1
+        name: stylelint
+        entry: npx --no-install stylelint --fix
+        language: system
+        types_or: [scss]
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
