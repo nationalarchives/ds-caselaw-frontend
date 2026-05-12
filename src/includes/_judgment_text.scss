@@ -30,7 +30,7 @@
 
     vertical-align: top;
 
-    background-color: rgba(colour-var("accent-brand"), 0.25);
+    background-color: rgb(colour-var("accent-brand"), 0.25);
   }
 }
 
@@ -338,7 +338,7 @@
     td {
       padding: 0.5rem 0.75rem;
       border: 1px solid colour-var("contrast-background");
-      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
   }
 
@@ -406,7 +406,7 @@
 
   &__nested-section {
     span {
-      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     @media (max-width: $grid-breakpoint-medium) {
